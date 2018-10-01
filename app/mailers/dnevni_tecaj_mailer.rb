@@ -1,0 +1,2 @@
+class DnevniTecajMailer < ApplicationMailer
+end

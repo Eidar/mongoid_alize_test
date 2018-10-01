@@ -1,0 +1,22 @@
+<%= form_with(model: devize, local: true) do |form| %>
+  <% if devize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(devize.errors.count, "error") %> prohibited this devize from being saved:</h2>
+
+      <ul>
+      <% devize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :valute_id %>
+    <%= form.text_field :valute_id, id: :devize_valute_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

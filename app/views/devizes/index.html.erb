@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Devizes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valute</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devizes.each do |devize| %>
+      <tr>
+        <td><%= devize.valute %></td>
+        <td><%= link_to 'Show', devize %></td>
+        <td><%= link_to 'Edit', edit_devize_path(devize) %></td>
+        <td><%= link_to 'Destroy', devize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Devize', new_devize_path %>

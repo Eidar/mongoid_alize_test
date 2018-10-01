@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Valutes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @valutes.each do |valute| %>
+      <tr>
+        <td><%= link_to 'Show', valute %></td>
+        <td><%= link_to 'Edit', edit_valute_path(valute) %></td>
+        <td><%= link_to 'Destroy', valute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Valute', new_valute_path %>
